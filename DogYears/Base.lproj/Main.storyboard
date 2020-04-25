@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dog YearsVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogYearsVC" customModule="DogYears" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doggie" translatesAutoresizingMaskIntoConstraints="NO" id="P3Y-e1-cT3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2gk-65-Vdk">
+                                <rect key="frame" x="0.0" y="59" width="375" height="199"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEa-hR-d5T">
+                                        <rect key="frame" x="100.33333333333333" y="0.0" width="174.33333333333337" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your dogs age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sRZ-f1-8WB">
+                                        <rect key="frame" x="108.66666666666669" y="60.333333333333329" width="158" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="rBg-Yz-yUq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bff-5B-gbc">
+                                        <rect key="frame" x="62.666666666666657" y="106.66666666666666" width="249.99999999999997" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="ARF-N7-phG"/>
+                                            <constraint firstAttribute="height" constant="30" id="YJ2-Iy-yUQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAU-vB-e0x" customClass="calculateBtn" customModule="DogYears" customModuleProvider="target">
+                                        <rect key="frame" x="62.666666666666657" y="149" width="249.99999999999997" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Ze1-99-2yV"/>
+                                            <constraint firstAttribute="width" constant="250" id="n2F-D3-Xi5"/>
+                                        </constraints>
+                                        <state key="normal" title="Calculate">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="calculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Stw-ZR-Tqt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2gk-65-Vdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="90y-fK-u5d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gk-65-Vdk" secondAttribute="trailing" id="JAR-nb-G3o"/>
+                            <constraint firstItem="P3Y-e1-cT3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JeJ-ja-TsB"/>
+                            <constraint firstItem="P3Y-e1-cT3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XTE-z0-ROk"/>
+                            <constraint firstItem="2gk-65-Vdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nJi-lc-vBk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2gk-65-Vdk" secondAttribute="bottom" constant="520" id="o9p-WO-KEu"/>
+                            <constraint firstAttribute="bottom" secondItem="P3Y-e1-cT3" secondAttribute="bottom" id="vXk-4L-tjg"/>
+                            <constraint firstItem="P3Y-e1-cT3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xDW-Yk-I4i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="sRZ-f1-8WB" id="V5L-q2-ICm"/>
+                        <outlet property="resultLabel" destination="bff-5B-gbc" id="pV1-8U-Cif"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="112.3152709359606"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doggie" width="4389" height="6583"/>
+    </resources>
+</document>
